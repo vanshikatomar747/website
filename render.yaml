@@ -1,0 +1,9 @@
+services:
+  - type: static
+    name: website
+    env: static
+    buildCommand: npm install && npm run build
+    publishPath: dist
+    rewrites:
+      - source: /.*
+        destination: /index.html
